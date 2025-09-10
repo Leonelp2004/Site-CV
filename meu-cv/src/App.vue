@@ -9,10 +9,12 @@
         <li><a href="#formacao">Formação</a></li>
         <li><a href="#projetos">Projetos</a></li>
         <li><a href="#extras">Idiomas/Certificações</a></li>
-        <li><strong><a href="Currículo.pdf" class="download-btn" download>Download CV</a></strong></li>
+        <li><strong><li><a href='/CV_Leonel-Pinheiro.pdf' class="download-btn" download>Download CV</a>
+</li>
+</strong></li>
       </ul>
       <div class="search-container">
-        <span class="search-icon" @click="toggleSearch">🔍</span>
+        <span class="search-icon" @click="toggleSearch"></span>
         <input
           v-model="searchQuery"
           :class="{ active: searchActive }"
@@ -102,12 +104,13 @@
         <div class="accordion-section">
           <div v-for="(proj, i) in filteredProjects" :key="i" class="card">
             <h3>{{ proj.nome }}</h3>
-            <a :href="proj.link" target="_blank">Consulte alguns dos projetos que desenvolvi</a>
+            <a :href="proj.link" target="_blank" class="download-btn">Consulte alguns dos projetos que desenvolvi</a> 
             <p>{{ proj.descricao }}</p>
           </div>
         </div>
         </section>
       </Accordion>
+      
 
     <Accordion title="Idiomas/Certificações">
       <section id="extras">
@@ -133,7 +136,7 @@
    <!-- Chat Widget -->
 <div class="chat-widget" :class="{ open: chatOpen }">
   <div class="chat-header" @click="toggleChat">
-    💬 Chat Bot Sobre Mim
+    Chat Bot "Sobre Mim"
   </div>
 
   <!-- Corpo do chat -->
@@ -209,12 +212,12 @@ const skills = [
   { nome: 'HTML, CSS, JS, Vue.js', nivel: 85 },
   { nome: 'Python', nivel: 75 },
   { nome: 'SQL', nivel: 75 },
-  { nome: 'SAP', nivel: 70 },
+  { nome: 'SAP', nivel: 65 },
   { nome: 'Java', nivel: 70 },
   { nome: 'Tableau', nivel: 80 },
   { nome: 'C++', nivel: 65 },
   { nome: 'Prolog', nivel: 55 },
-  { nome: 'Power Apps', nivel: 85 }
+  { nome: 'Power Apps', nivel: 80 }
 ]
 
 // PROJETOS
@@ -227,6 +230,7 @@ const projects = [
   },
   {
     nome:'Projetos Estágio Profissional',
+    link:'https://github.com/Leonelp2004/Projetos.git',
     descricao:'Projeto de automação da criação e distribuição de vídeos técnicos (PT/EN), através da integração da HeyGen API e Gemini API com ServiceDesk+, Power Automate, SharePoint, Teams, Outlook e OneDrive. As principais funcionalidades implementadas incluíram: • Obtenção automática dos boletins técnicos no ServiceDesk+; • Verificação da existência de vídeos associados a um dado boletim; • Geração automática do guião do orador e mensagens de apoio; • Produção de vídeos AI em PT/EN; • Armazenamento no OneDrive/SharePoint; • Criação de links de partilha e comunicação automática via Teams e Outlook com thumbnails; • Atualização do boletim técnico no CSI com os links dos vídeos. Posteriormente, desenvolvi o CSI BOT – Agente de Suporte IT Inteligente, um chat Bot criado no Copilot Studio com fluxos em Power Automate, integrando-se com ServiceDesk+, OneDrive, SharePoint, Outlook e Teams. O agente foi concebido para: • Obter informações de atualizações recentes de tickets • Consultar estado/detalhes de tickets/pedidos • Criar novos tickets por via conversacional • Detalhes/resumos/atualizações de boletins técnicos • Disponibilizar vídeos Heygen de um boletim técnico • Criar vídeos HeyGen (apenas para colaboradores autorizados) • Informações gerais da DSI • Informações colaboradores DSI/HELPDESK • Consultar id de um dado boletim • Consultar id de um dado ticket • Resolução de problemas relacionados com tickets • Histórico de conversas de um dado ticket • Enviar mensagens Teams com o conteúdo que o utilizador desejar • Enviar email Outlook ao utilizador ou criar rascunho',
     tags:'profissional vue js'
   }

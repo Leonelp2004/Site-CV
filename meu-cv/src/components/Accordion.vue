@@ -16,7 +16,7 @@
 import { ref, watchEffect } from 'vue'
 const props = defineProps({
   title: String,
-  defaultOpen: { type: Boolean, default: false }  // permite abrir por padrão
+  defaultOpen: { type: Boolean, default: false }  
 })
 
 const open = ref(props.defaultOpen)
