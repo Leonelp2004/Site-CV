@@ -181,8 +181,6 @@
     </div>
   </div>
 </footer>
-
-
   </div>
 </template>
 
@@ -295,4 +293,51 @@ const sendMessage = async () => {
 }
 
 </script>
+
+
+
+<style scoped>
+/* MENU MOBILE */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: block;
+    font-size: 1.5rem; 
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 8px;
+    gap: 8px; 
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li a,
+  .download-btn {
+    width: 100%;
+    text-align: center;
+    padding: 8px 8px; 
+    font-size: 0.7rem; 
+  }
+}
+
+</style>
 

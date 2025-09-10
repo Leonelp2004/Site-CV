@@ -1,15 +1,16 @@
 body { 
-  margin:0; 
-  font-family:'Inter', sans-serif; 
-  background:#1e1e2f; 
-  color:#eee; 
+  margin: 0; 
+  font-family: 'Inter', sans-serif; 
+  background: #1e1e2f; 
+  color: #eee; 
 }
 
 .container { 
-  max-width:900px; 
-  margin:100px auto 40px auto; 
-  padding:0 20px; 
+  max-width: 900px; 
+  margin: 100px auto 40px auto; 
+  padding: 0 20px; 
 }
+
 /* Títulos das seções */
 h2 {
   color: #000000;
@@ -20,32 +21,31 @@ h2 {
 
 /* Texto principal */
 p {
-  color: #070707;   /* cinza claro, suave no fundo escuro */
+  color: #070707;
   line-height: 1.6;
   margin-bottom: 10px;
 }
 
 /* Texto de destaque / roles */
 .card-header span, .card-role {
-  color: #121212;  /* cinza médio para datas, cargos */
+  color: #121212;
   font-size: 0.95rem;
 }
 
 /* NAVBAR */
-
 html {
   scroll-behavior: smooth;
 }
 
 section {
-  scroll-margin-top: 100px; /* ajusta conforme a altura da tua navbar */
+  scroll-margin-top: 100px; /* ajusta conforme a altura da navbar */
 }
 
-
-/* NAVBAR */
 nav {
   position: fixed;
-  top: 0; left: 0; width: 100%;
+  top: 0; 
+  left: 0; 
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,7 +57,7 @@ nav {
   font-size: 1rem;
 }
 
-/* Logo com linha moderna */
+/* Logo */
 nav .logo {
   font-size: 1.6rem;
   font-weight: 600;
@@ -68,7 +68,7 @@ nav .logo {
   font-family: 'Inter', sans-serif;
 }
 
-/* Linha moderna */
+/* Linha da logo */
 nav .logo::after {
   content: '';
   position: absolute;
@@ -85,10 +85,10 @@ nav .logo:hover::after {
   width: 100%;
 }
 
-/* Menu de navegação */
+/* Menu */
 nav ul {
   display: flex;
-  gap: 60px; /* espaçamento entre links */
+  gap: 40px; /* reduzi o gap para caber melhor */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -109,7 +109,7 @@ nav ul li a:hover {
   color: #fff;
 }
 
-/* BOTÃO DOWNLOAD ESCURO */
+/* Botão download */
 .download-btn {
   background: #7f5af0;
   color: #fff;
@@ -125,12 +125,23 @@ nav ul li a:hover {
   box-shadow: 0 4px 10px rgba(155,89,182,0.4);
 }
 
-/* RESPONSIVO: Mobile */
+/* 🔹 Responsividade */
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 20px; /* em tablets reduz ainda mais o espaço */
+  }
+}
+
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
     align-items: flex-start;
     padding: 10px 20px;
+  }
+
+  nav .logo {
+    margin-bottom: 10px;
+    font-size: 1.4rem; /* menor no mobile */
   }
 
   nav ul {
@@ -143,13 +154,17 @@ nav ul li a:hover {
   nav ul li a {
     width: 100%;
     text-align: center;
+    padding: 10px;
+    font-size: 1rem;
   }
 
   .download-btn {
     width: 100%;
     text-align: center;
+    margin-top: 10px;
   }
 }
+
 
 /* ÍCONE DE PESQUISA */
 .search-container { 
