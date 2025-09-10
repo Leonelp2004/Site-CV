@@ -337,6 +337,23 @@ nav ul {
     padding: 8px 8px; 
     font-size: 0.7rem; 
   }
+  .chat-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 180px;
+  height: 50px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+}
+.chat-widget.open { height: 400px; }
 }
 
 </style>

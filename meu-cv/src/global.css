@@ -125,10 +125,10 @@ nav ul li a:hover {
   box-shadow: 0 4px 10px rgba(155,89,182,0.4);
 }
 
-/* 🔹 Responsividade */
+
 @media (max-width: 1024px) {
   nav ul {
-    gap: 20px; /* em tablets reduz ainda mais o espaço */
+    gap: 20px; 
   }
 }
 
@@ -298,7 +298,6 @@ input.active {
   transition: width 0.5s ease-in-out;
 }
 
-/* RESPONSIVO: colunas viram lista em telas pequenas */
 @media(max-width:600px){
   .skills-container {
     flex-direction: column;
@@ -364,7 +363,6 @@ input.active {
   box-shadow: 0 6px 18px rgba(0,0,0,0.6);
 }
 
-/* RESPONSIVO: Imagem abaixo do texto em telas pequenas */
 @media(max-width:600px){
   .about {
     flex-direction: column;
@@ -427,14 +425,12 @@ input.active {
   transition: transform 0.3s, color 0.3s;
 }
 
-
-
 /* Chat Widget */
 .chat-widget {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 320px;
+  width: 270px;
   height: 60px;
   background: #fff;
   border-radius: 10px;
