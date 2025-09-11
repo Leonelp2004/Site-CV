@@ -8,6 +8,7 @@
         <li><a href="#experiencia">Experiência</a></li>
         <li><a href="#formacao">Formação</a></li>
         <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#extras">Idiomas/Certificações</a></li>
         <li><strong><li><a href='/CV_Leonel-Pinheiro.pdf' class="download-btn" download>Download CV</a>
 </li>
@@ -32,13 +33,13 @@
           <div class="about-content">
             <h2>BSc in Information Systems Engineering and Management | University of Minho</h2>
             <p>
-              Chamo-me Leonel Pinheiro, tenho 21 anos e resido em Amares, Braga.
-              Sou recém licenciado em Engenharia e Gestão de Sistemas de Informação. Tenho procurado,
+              Chamo-me <strong>Leonel Pinheiro</strong>, tenho <strong>21 anos</strong> e resido em <strong>Amares, Braga</strong>.
+              Sou recém licenciado em <strong><a href='https://legsi.dsi.uminho.pt/'target= 'blank'>Engenharia e Gestão de Sistemas de Informação</a></strong>. Tenho procurado,
               ao longo do meu percurso académico e profissional, desenvolver continuamente as minhas
               competências técnicas e interpessoais, com o objetivo de me tornar uma mais-valia em
               projetos futuros, seja na área de desenvolvimento de software ou em qualquer outro contexto.
               Ao longo da minha jornada já participei em várias ações de voluntariado, nomeadamente no
-              projeto Missão Amar(es), bem como num concurso de empreendedorismo UP Cávado alcançando
+              projeto Missão Amar(es), bem como num concurso de empreendedorismo <strong><a href= 'https://www.cimcavado.pt/up-cavado/' target= 'blank'>UP Cávado</a></strong> alcançando
               a terceira colocação.
             </p>
           </div>
@@ -84,6 +85,7 @@
       <!-- SKILLS -->
       
     <Accordion title="Skills / Competências">
+      <section id="skills" class="accordion-section"></section>
       <div class="skills-container">
         <div class="skills-column" v-for="(col, index) in 2" :key="index">
           <div v-for="(skill, i) in skills.filter((_, idx) => idx % 2 === index)" :key="i" class="skill-bar">
@@ -104,7 +106,7 @@
         <div class="accordion-section">
           <div v-for="(proj, i) in filteredProjects" :key="i" class="card">
             <h3>{{ proj.nome }}</h3>
-            <a :href="proj.link" target="_blank" class="download-btn">Consulte alguns dos projetos que desenvolvi</a> 
+            <a :href="proj.link" target="_blank" class="download-btn">Clique aqui para consultar alguns dos projetos que desenvolvi</a> 
             <p>{{ proj.descricao }}</p>
           </div>
         </div>
@@ -153,7 +155,7 @@
       placeholder="Indique o que deseja saber sobre mim..."
       rows="2"
     ></textarea>
-    <button @click="sendMessage">Enviar</button>
+    <button @click="sendMessage"><strong>Enviar</strong></button>
   </div>
 </div>
 
@@ -223,7 +225,7 @@ const projects = [
   {
     nome:'Projetos Universitários',
     link:'https://github.com/Leonelp2004/Projetos.git',
-    descricao:'Algoritmos e Estruturas de Dados (Projeto em C++) Sistemas de Computação (Projeto em Assembly) Bases de Dados (Projeto em SQL e Cassandra) Processo e Metodologias de Software (Projeto com ferramentas de modelação (UML)) Programação com Objetos (Projeto em Java) Sistemas Operativos (Projeto em Linux) Introdução às Redes de Computadores (Projeto envolvendo protocolos: TCP/IP, HTTP, DHCP) Desenvolvimento de Aplicações Informáticas (Projeto em HTML, CSS,JS) Implantação de Aplicações Informáticas Empresariais (Projeto em SAP, React, Moloni, JSON) Engenharia de Dados para Suporte a Tomada de Decisão (Projeto em SQL, Jupyter, Tableau, Hadoop, Spark) Fundamentos de Sistemas de Informação (Projeto em Python) Programação Web (Projeto em HTML, CSS, JS, Vue.js) Desenvolvimento Organizacional de Tecnologias de Informação (Projeto com modelação de processos, ERPs, CRMs) Técnicas de Inteligência Artificial (Projeto em Prolog)',
+    descricao: '- Algoritmos e Estruturas de Dados (Projeto em C++)\n- Sistemas de Computação (Projeto em Assembly)\n- Bases de Dados (Projeto em SQL e Cassandra)\n- Processo e Metodologias de Software (Projeto com ferramentas de modelação (UML))\n- Programação com Objetos (Projeto em Java)\n- Sistemas Operativos (Projeto em Linux)\n- Introdução às Redes de Computadores (Projeto envolvendo protocolos: TCP/IP, HTTP, DHCP)\n- Desenvolvimento de Aplicações Informáticas (Projeto em HTML, CSS, JS)\n- Implantação de Aplicações Informáticas Empresariais (Projeto em SAP, React, Moloni, JSON)\n- Engenharia de Dados para Suporte a Tomada de Decisão (Projeto em SQL, Jupyter, Tableau, Hadoop, Spark)\n- Fundamentos de Sistemas de Informação (Projeto em Python)\n- Programação Web (Projeto em HTML, CSS, JS, Vue.js)\n- Desenvolvimento Organizacional de Tecnologias de Informação (Projeto com modelação de processos, ERPs, CRMs)\n- Técnicas de Inteligência Artificial (Projeto em Prolog)',
     tags:'universitario html css js'
   },
   {
@@ -312,7 +314,7 @@ nav ul {
   gap: 40px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1423px) {
   .menu-toggle {
     display: block;
     font-size: 1.5rem; 

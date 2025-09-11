@@ -31,6 +31,10 @@ p {
   color: #121212;
   font-size: 0.95rem;
 }
+p strong a {
+  color: #000000;
+  text-decoration: underline;
+}
 
 /* NAVBAR */
 html {
@@ -120,7 +124,7 @@ nav ul li a:hover {
 }
 
 .download-btn:hover {
-  background: #9b59b6;
+  background: #6d61df;
   transform: translateY(-1px);
   box-shadow: 0 4px 10px rgba(155,89,182,0.4);
 }
@@ -260,13 +264,13 @@ input.active {
 /* SKILLS */
 .skills-container {
   display: flex;
-  gap: 30px; /* espaço entre colunas */
+  gap: 30px; 
   flex-wrap: wrap;
 }
 
 .skills-column {
   flex: 1;
-  min-width: 200px; /* garante que não fique muito estreito */
+  min-width: 200px; 
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -276,6 +280,10 @@ input.active {
   display: flex;
   flex-direction: column;
 }
+.skill-level:hover  {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(155,89,182,0.4);
+  transition: transform 0.2s, box-shadow 0.2s;}
 
 .skill-name {
   font-weight: 600;
@@ -353,7 +361,7 @@ input.active {
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #4cd964; /* borda verde suave */
+  border: 2px solid #4cd964;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -412,7 +420,7 @@ input.active {
 }
 
 .contact-item:hover a {
-  color: #7f5af0; /* destaque elegante */
+  color: #7f5af0; 
 }
 
 .contact-item:hover .icon {
@@ -431,7 +439,7 @@ input.active {
   bottom: 20px;
   right: 20px;
   width: 270px;
-  height: 60px;
+  height: 38px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
@@ -441,7 +449,14 @@ input.active {
   transition: height 0.3s ease;
   font-family: Arial, sans-serif;
   z-index: 1000;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+.chat-widget:hover {
+  background: #6d61df;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(155,89,182,0.4);
+}
+
 .chat-widget.open { height: 400px; }
 
 .chat-header {
@@ -452,7 +467,11 @@ input.active {
   cursor: pointer;
   text-align: center;
 }
-
+.chat-header:hover {
+  background: #6d61df;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(155,89,182,0.4);
+}
 .chat-body {
   flex: 1;
   padding: 10px;
@@ -494,4 +513,9 @@ input.active {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+.chat-input button:hover {
+  background: #6d61df;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(155,89,182,0.4);
 }
